@@ -1,0 +1,64 @@
+.features__title {
+  margin-bottom: 38px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  list-style: none;
+  counter-reset: feature-number;
+}
+
+.features__item {
+  position: relative;
+  // &::after {
+  //   content: counter(feature-number);
+  //   position: absolute;
+  //   z-index: -1;
+  //   right: 0;
+  //   top: 0;
+  //   font-family: $font-regular;
+  //   font-size: 280px;
+  //   line-height: 280px;
+  //   color: $basic-grey;
+  //   counter-increment: feature-number;
+  // }
+}
+
+.features__descr {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 60px auto;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 14px;
+  line-height: 18px;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--healthy::before {
+    background-image: url("../../img/icon_leaf.svg");
+  }
+
+  &--type::before {
+    background-image: url("../../img/icon_tub.svg");
+  }
+
+  &--plan::before {
+    background-image: url("../../img/icon_eat.svg");
+  }
+
+  &--profit::before {
+    background-image: url("../../img/icon_alarm.svg");
+  }
+}
