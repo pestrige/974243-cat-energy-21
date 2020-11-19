@@ -1,0 +1,33 @@
+.main-footer__map {
+  background-color: $basic-grey;
+}
+
+.main-footer__links {
+  padding-top: 39px;
+  display: grid;
+  justify-items: center;
+  background-color: $basic-grey;
+}
+
+.main-footer__logo {
+  margin-bottom: 28px;
+}
+
+.main-footer__socials {
+  justify-self: stretch;
+}
+
+.main-footer__creators {
+  width: 100%;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer__created-by {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+

@@ -1,0 +1,32 @@
+.humburger {
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  border: 0;
+  cursor: pointer;
+}
+
+.humburger--open {
+  position: relative;
+  width: 25px;
+  height: 25px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 25px;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

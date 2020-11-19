@@ -1,0 +1,81 @@
+.demo {
+  padding: 27px 21px 25px 20px;
+  background-color: $light-extra-grey;
+}
+
+.demo__title {
+  margin-bottom: 33px;
+}
+
+.demo__descr {
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.demo__facts-wrapper {
+  margin-bottom: 42px;
+}
+
+.demo__facts {
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.demo__fact {
+  position: relative;
+  width: 124px;
+  border: 2px solid $special-grey;
+  border-radius: 3px;
+}
+
+.demo__fact-title {
+  margin: 0;
+  padding: 13px 0 15px 0;
+  font-family: $font-regular;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.demo__fact-descr {
+  position: absolute;
+  width: 87px;
+  bottom: -17px;
+  left: 50%;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: lowercase;
+  transform: translateX(-50%);
+  background-color: $light-extra-grey;
+}
+
+.demo__money-spent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-regular;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.demo__money-spent-title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.demo__money-spent-value {
+  margin: 0;
+}
+

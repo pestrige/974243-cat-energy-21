@@ -1,0 +1,28 @@
+.main-nav {
+  font-family: $font-medium;
+  font-size: 20px;
+  line-height: 20px;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.main-nav__list {
+  margin: 0 -20px;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  padding-top: 22px;
+  padding-bottom: 23px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.main-nav__link {
+  color: inherit;
+}
