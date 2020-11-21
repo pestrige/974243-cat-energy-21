@@ -3,6 +3,10 @@
   padding-bottom: 22px;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    padding: 66px 71px 59px 71px;
+  }
 }
 
 .offer__title {
@@ -12,16 +16,34 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    width: 171px;
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .offer__address {
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    width: 159px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+  }
 }
 
 .offer__address-street,
 .offer__address-city {
   margin: 0;
-  padding: 0;
+}
+
+.offer__address-street {
+  @media (min-width: $tablet) {
+    margin-bottom: 22px;
+  }
 }

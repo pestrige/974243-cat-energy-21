@@ -1,30 +1,56 @@
+.features {
+  @media (min-width: $tablet) {
+    padding-bottom: 6px;
+    border-bottom: 1px solid $extra-special-grey;
+  }
+}
+
 .features__title {
-  margin-bottom: 38px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 72px;
+  }
 }
 
 .features__list {
   margin: 0;
-  padding: 0;
   display: grid;
-  gap: 20px;
+  row-gap: 20px;
   list-style: none;
   counter-reset: feature-number;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 37px;
+    column-gap: 59px;
+  }
 }
 
 .features__item {
   position: relative;
-  // &::after {
-  //   content: counter(feature-number);
-  //   position: absolute;
-  //   z-index: -1;
-  //   right: 0;
-  //   top: 0;
-  //   font-family: $font-regular;
-  //   font-size: 280px;
-  //   line-height: 280px;
-  //   color: $basic-grey;
-  //   counter-increment: feature-number;
-  // }
+
+  @media (min-width: $tablet) {
+    width: 250px;
+    min-height: 280px;
+
+    &::after {
+      content: counter(feature-number);
+      position: absolute;
+      z-index: -1;
+      right: 3px;
+      top: -40px;
+      font-family: $font-regular;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      counter-increment: feature-number;
+    }
+
+    &:first-child::after {
+      right: 21px;
+    }
+  }
 }
 
 .features__descr {
@@ -37,6 +63,13 @@
   font-size: 14px;
   line-height: 18px;
 
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   &::before {
     content: "";
     width: 60px;
@@ -44,6 +77,11 @@
     background-color: $basic-green;
     background-repeat: no-repeat;
     background-position: center center;
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--healthy::before {

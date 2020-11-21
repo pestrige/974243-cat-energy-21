@@ -1,11 +1,23 @@
 .main-content__promo {
   margin-bottom: 22px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .main-content__products {
   margin-bottom: 27px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 45px;
+  }
 }
 
 .main-content__features {
-  margin-bottom: 42px;
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
 }

@@ -4,11 +4,19 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet) {
+    gap: 30px;
+  }
 }
 
 .products__item {
   padding: 21px 20px 19px 20px;
   background-color: $basic-grey;
+
+  @media (min-width: $tablet) {
+    padding: 68px 52px 57px 53px;
+  }
 }
 
 .products__title {
@@ -23,38 +31,76 @@
   color: $black;
   text-transform: uppercase;
 
+  @media (min-width: $tablet) {
+    padding-left: 0;
+    margin-bottom: 25px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
   &--slim::before,
   &--pro::before {
     content: "";
     position: absolute;
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: cover;
   }
 
   &--slim::before {
-    top: -9px;
+    top: -10px;
     left: 2px;
     width: 50px;
     height: 53px;
     background-image: url("../../img/cat_back.svg");
+
+    @media (min-width: $tablet) {
+      top: 3px;
+      left: auto;
+      right: 10px;
+      width: 200px;
+      height: 212px;
+    }
   }
 
   &--pro::before {
-    top: -6px;
+    top: -7px;
     left: -7px;
     width: 67px;
     height: 50px;
     background-image: url("../../img/cat_back-pro.svg");
+
+    @media (min-width: $tablet) {
+      top: 14px;
+      left: auto;
+      right: -22px;
+      width: 268px;
+      height: 200px;
+    }
   }
 }
 
 .products__descr {
   margin: 0;
-  padding-bottom: 22px;
   margin-bottom: 19px;
+  padding-bottom: 22px;
   font-size: 14px;
   line-height: 18px;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet) {
+    margin-right: 230px;
+    margin-bottom: 29px;
+    font-size: 16px;
+    line-height: 24px;
+    border: 0;
+  }
+}
+
+.products__item:last-child .products__descr {
+  @media (min-width: $tablet) {
+    margin-right: 259px;
+  }
 }
 
 .products__link {
@@ -67,6 +113,11 @@
   color: $black;
   text-transform: uppercase;
 
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -77,6 +128,10 @@
     background-color: $black;
     transform: translateY(-50%);
     transition: width 0.3s, right 0.3s;
+
+    @media (min-width: $tablet) {
+      right: calc(14px - 7px);
+    }
   }
 
   &::after {
@@ -90,14 +145,26 @@
     border-left: 7px solid $black;
     transform: translateY(-50%);
     transition: right 0.3s;
+
+    @media (min-width: $tablet) {
+      right: calc(4px - 9px);
+    }
   }
 
   &:hover::before {
     width: 26px;
     right: 6px;
+
+    @media (min-width: $tablet) {
+      right: calc(6px - 7px);
+    }
   }
 
   &:hover::after {
     right: -4px;
+
+    @media (min-width: $tablet) {
+      right: calc(-4px - 9px);
+    }
   }
 }
