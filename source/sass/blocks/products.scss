@@ -145,18 +145,10 @@
 
   &:hover::before {
     width: 26px;
-    right: 6px;
-
-    @media (min-width: $tablet) {
-      right: calc(6px - 7px);
-    }
+    right: 5px;
   }
 
   &:hover::after {
-    right: -4px;
-
-    @media (min-width: $tablet) {
-      right: calc(-4px - 9px);
-    }
+    right: -8px;
   }
 }
