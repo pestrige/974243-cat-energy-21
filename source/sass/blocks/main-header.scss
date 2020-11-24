@@ -1,16 +1,35 @@
 .main-header {
+  padding-top: 12px;
   display: grid;
   grid-template-columns: 1fr 33px;
   align-items: center;
 
   @media (min-width: $tablet) {
-    padding-top: 12px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 19px;
     grid-template-columns: 174px 1fr;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    grid-template-columns: 202px 1fr;
+    padding-top: 46px;
   }
 }
 
 .main-header__logo {
+  margin-bottom: 12px;
   grid-row: 1 / 2;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .main-header__nav {
@@ -24,6 +43,7 @@
 }
 
 .main-header__menu-button {
+  margin-bottom: 14px;
   grid-row: 1 / 2;
   justify-self: end;
 

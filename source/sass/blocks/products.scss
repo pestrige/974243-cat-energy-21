@@ -1,3 +1,13 @@
+.products {
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+  }
+}
+
 .products__list {
   display: grid;
   gap: 20px;
@@ -6,7 +16,12 @@
   list-style: none;
 
   @media (min-width: $tablet) {
-    gap: 30px;
+    gap: 33px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-auto-flow: column;
+    gap: 80px;
   }
 }
 
@@ -15,7 +30,12 @@
   background-color: $basic-grey;
 
   @media (min-width: $tablet) {
-    padding: 68px 52px 57px 53px;
+    padding: 65px 52px 57px 53px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 570px;
+    padding: 68px 51px 59px 52px;
   }
 }
 
@@ -36,6 +56,11 @@
     margin-bottom: 25px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 162px;
+    margin-bottom: 74px;
   }
 
   &--slim::before,
@@ -61,6 +86,14 @@
       width: 200px;
       height: 212px;
     }
+
+    @media (min-width: $desktop) {
+      right: auto;
+      left: 0;
+      top: -36px;
+      width: 100px;
+      height: 106px;
+    }
   }
 
   &--pro::before {
@@ -76,6 +109,14 @@
       right: -22px;
       width: 268px;
       height: 200px;
+    }
+
+    @media (min-width: $desktop) {
+      right: auto;
+      left: -19px;
+      top: -30px;
+      width: 134px;
+      height: 100px;
     }
   }
 }
@@ -95,11 +136,20 @@
     line-height: 24px;
     border: 0;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: auto;
+    margin-bottom: 4px;
+  }
 }
 
 .products__item:last-child .products__descr {
   @media (min-width: $tablet) {
     margin-right: 259px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: auto;
   }
 }
 
@@ -143,12 +193,14 @@
     transition: right 0.3s;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     width: 26px;
     right: 5px;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     right: -8px;
   }
 }

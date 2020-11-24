@@ -1,21 +1,53 @@
 .demo {
-  padding-top: 27px;
   background-color: $light-extra-grey;
 
   @media (min-width: $tablet) {
     background-color: $white;
   }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 43px;
+    background-image: linear-gradient(180deg, $white 29%, $light-extra-grey 29%);
+  }
+}
+
+.demo__inner {
+  padding-top: 27px;
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 648px 1fr;
+  }
 }
 
 .demo__text-block {
+  margin-bottom: 36px;
   padding-left: 20px;
   padding-right: 21px;
-  margin-bottom: 36px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 85px;
     padding-left: 30px;
     padding-right: 30px;
+    margin-bottom: 85px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $desktop;
+    margin-bottom: 0;
+    padding-top: 53px;
+    padding-left: 110px;
+    padding-right: 0;
   }
 }
 
@@ -25,9 +57,14 @@
   @media (min-width: $tablet) {
     margin-bottom: 64px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 147px;
+  }
 }
 
 .demo__descr {
+  margin-top: 0;
   margin-bottom: 25px;
   font-size: 14px;
   line-height: 18px;
@@ -36,6 +73,11 @@
     margin-bottom: 54px;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 436px;
+    margin-bottom: 69px;
   }
 }
 
@@ -58,6 +100,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 59px;
   }
 }
 
@@ -119,6 +165,10 @@
     line-height: 14px;
     background-color: $white;
   }
+
+  @media (min-width: $desktop) {
+    background-color: $light-extra-grey;
+  }
 }
 
 .demo__money-spent {
@@ -131,11 +181,15 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    // margin-top: -12px;
     flex-direction: column;
     align-items: flex-end;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    align-items: baseline;
   }
 }
 
@@ -150,8 +204,19 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    margin-right: 59px;
+  }
 }
 
 .demo__money-spent-value {
   margin: 0;
+}
+
+.demo__slider {
+  @media (min-width: $desktop) {
+    margin-top: 0;
+  }
 }

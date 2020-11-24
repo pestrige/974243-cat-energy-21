@@ -4,6 +4,13 @@
   @media (min-width: $tablet) {
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: -122px;
+    margin-bottom: 82px;
+    padding-bottom: 50px;
+    z-index: -1;
+  }
 }
 
 .main-content__products {
@@ -12,6 +19,15 @@
   @media (min-width: $tablet) {
     margin-bottom: 45px;
   }
+
+  @media (min-width: 1024px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 71px;
+  }
 }
 
 .main-content__features {
@@ -19,5 +35,14 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 26px;
   }
 }

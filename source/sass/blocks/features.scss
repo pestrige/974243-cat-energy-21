@@ -1,7 +1,17 @@
 .features {
   @media (min-width: $tablet) {
-    padding-bottom: 6px;
+    padding-bottom: 56px;
     border-bottom: 1px solid $extra-special-grey;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $desktop;
+    padding-bottom: 0;
+    border: none;
   }
 }
 
@@ -22,8 +32,13 @@
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
-    row-gap: 37px;
+    row-gap: 87px;
     column-gap: 59px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
   }
 }
 
@@ -31,14 +46,14 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    width: 250px;
-    min-height: 280px;
+    width: 245px;
+    min-height: 230px;
 
     &::after {
       content: counter(feature-number);
       position: absolute;
       z-index: -1;
-      right: 3px;
+      right: -2px;
       top: -40px;
       font-family: $font-regular;
       font-size: 280px;
@@ -48,8 +63,12 @@
     }
 
     &:first-child::after {
-      right: 21px;
+      right: 16px;
     }
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
   }
 }
 

@@ -5,6 +5,11 @@
     padding-bottom: 43px;
     background-image: linear-gradient(180deg, $white 27%, $light-extra-grey 27%);
   }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+    background-image: none;
+  }
 }
 
 .slider__wrapper {
@@ -26,11 +31,17 @@
   left: 0;
   background-color: $light-extra-grey;
   overflow: hidden;
+  z-index: 2;
 
   @media (min-width: $tablet) {
-    background-color: transparent;
     width: 50%; // убрать при реализации слайдера
+    margin-left: 0;
     height: 520px;
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop) {
+    // margin-left: -25px;
   }
 
   &::before {
@@ -45,10 +56,18 @@
 }
 
 .slider__img-wrapper {
+  position: relative;
+  height: 240px;
   margin-bottom: 20px;
 
   @media (min-width: $tablet) {
+    height: 520px;
     margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    margin-bottom: 31px;
   }
 }
 
