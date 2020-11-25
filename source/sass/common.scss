@@ -16,6 +16,16 @@ input[type="radio"].visually-hidden {
 .container {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: $tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .main-title {
@@ -25,14 +35,23 @@ input[type="radio"].visually-hidden {
   font-size: 36px;
   line-height: 36px;
   color: $black;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .section-title {
   margin: 0;
-  padding: 0;
   font-family: $font-regular;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .btn {

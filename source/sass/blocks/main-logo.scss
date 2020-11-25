@@ -1,8 +1,17 @@
 .main-logo {
-  width: 190px;
-  padding-top: 12px;
-  padding-bottom: 16px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 33px 1fr;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.main-logo__text {
+  justify-self: center;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }

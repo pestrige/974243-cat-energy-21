@@ -1,6 +1,9 @@
 .socials {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
+  padding-top: 20px;
+  padding-bottom: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,11 +11,59 @@
   list-style: none;
   border-top: 1px solid $extra-special-grey;
   border-bottom: 1px solid $extra-special-grey;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    justify-content: space-between;
+    border: none;
+  }
 }
 
 .socials__item {
-  padding-top: 20px;
-  padding-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
+  width: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    width: auto;
+  }
+
+  & + & {
+    margin-left: 30px;
+
+    @media (min-width: $tablet) {
+      margin-left: 28px;
+    }
+  }
+}
+
+.socials__link--vk svg {
+  width: 23px;
+  height: 16px;
+
+  @media (min-width: $tablet) {
+    width: 29px;
+    height: 18px;
+  }
+}
+
+.socials__link--instargam svg {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: $tablet) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.socials__link--facebook svg {
+  width: 22px;
+  height: 22px;
+
+  @media (min-width: $tablet) {
+    width: 15px;
+    height: 29px;
+  }
 }
