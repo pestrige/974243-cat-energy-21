@@ -28,18 +28,21 @@ const resizedImageWrapper = slider.querySelector('.slider__img-resize');
 const resizedImage = slider.querySelector('.slider__img-before>img');
 const sliderRange = slider.querySelector('.slider__range');
 const sliderRangeHandle = slider.querySelector('.slider__range-toggle');
+const sliderRangeHandleMobile = slider.querySelector('.slide__range-mobile-toggle');
 const btnBefore = slider.querySelector('.slider__btn--before');
 const btnAfter = slider.querySelector('.slider__btn--after');
 
 btnBefore.addEventListener('click', () => {
   resizedImageWrapper.classList.add('transition-resize');
   sliderRangeHandle.classList.add('transition-resize');
+  sliderRangeHandleMobile.classList.add('transition-resize');
   slider.style.setProperty('--show-persent', '0' + '%');
 });
 
 btnAfter.addEventListener('click', () => {
   resizedImageWrapper.classList.add('transition-resize');
   sliderRangeHandle.classList.add('transition-resize');
+  sliderRangeHandleMobile.classList.add('transition-resize');
   slider.style.setProperty('--show-persent', '100' + '%');
 });
 
@@ -85,6 +88,7 @@ function imageCompareOnTouch() {
     //console.log('нажата');
     resizedImageWrapper.classList.remove('transition-resize');
     sliderRangeHandle.classList.remove('transition-resize');
+    sliderRangeHandleMobile.classList.remove('transition-resize');
 
     slider.ontouchmove = (evt) => {
       let mouseX = evt.pageX;
