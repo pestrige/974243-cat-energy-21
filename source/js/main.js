@@ -80,7 +80,44 @@ function imageCompare() {
   };
 };
 
+function imageCompareOnTouch() {
+  sliderRangeHandle.ontouchstart = () => {
+    //console.log('нажата');
+    resizedImageWrapper.classList.remove('transition-resize');
+    sliderRangeHandle.classList.remove('transition-resize');
+
+    slider.ontouchmove = (evt) => {
+      let mouseX = evt.pageX;
+      let sliderRangeWidth = sliderRange.offsetWidth;
+      let sliderRangeX = sliderRange.getBoundingClientRect().left;
+      let offset = mouseX - sliderRangeX;
+
+      if (offset < 0) {
+        offset = 0;
+      };
+      if (offset > sliderRangeWidth) {
+        offset = sliderRangeWidth;
+      };
+
+      let offsetInPersent = Math.round(offset * 100 / sliderRangeWidth);
+      slider.style.setProperty('--show-persent', offsetInPersent + '%');
+      //console.log(mouseX, sliderRangeX, sliderRangeWidth, offset, offsetInPersent);
+    };
+
+    document.ontouchend = () => {
+      slider.ontouchmove = null;
+      sliderRangeHandle.ontouchend = null;
+      //console.log('отпущена');
+    }
+
+    sliderRangeHandle.ondragstart = function () {
+      return false;
+    };
+  };
+};
+
 imageCompare();
+imageCompareOnTouch();
 
 
 /* slider on hover */
