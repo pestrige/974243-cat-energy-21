@@ -38,32 +38,56 @@
   }
 }
 
-.socials__link--vk svg {
-  width: 23px;
-  height: 16px;
-
-  @media (min-width: $tablet) {
-    width: 29px;
-    height: 18px;
-  }
-}
-
-.socials__link--instargam svg {
-  width: 16px;
-  height: 16px;
-
-  @media (min-width: $tablet) {
+.socials__link {
+  &--vk svg {
     width: 23px;
-    height: 23px;
+    height: 16px;
+
+    @media (min-width: $tablet) {
+      width: 29px;
+      height: 18px;
+    }
+  }
+
+  &--instargam svg {
+    width: 16px;
+    height: 16px;
+
+    @media (min-width: $tablet) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--facebook svg {
+    width: 22px;
+    height: 22px;
+
+    @media (min-width: $tablet) {
+      width: 15px;
+      height: 29px;
+    }
+  }
+
+  &:hover .socials__svg-path {
+    fill: $basic-green;
+  }
+
+  &:active .socials__svg-path {
+    fill: rgba($basic-green, 0.3);
+  }
+
+  &:hover .socials__svg-stroke {
+    stroke: $basic-green;
+  }
+
+  &:active .socials__svg-stroke {
+    stroke: rgba($basic-green, 0.3);
   }
 }
 
-.socials__link--facebook svg {
-  width: 22px;
-  height: 22px;
-
-  @media (min-width: $tablet) {
-    width: 15px;
-    height: 29px;
-  }
+.socials__svg-path,
+.socials__svg-stroke {
+  transition: fill 0.3s, stroke 0.3s;
 }
+

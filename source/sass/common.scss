@@ -29,12 +29,13 @@ input[type="radio"].visually-hidden {
 }
 
 .main-title {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: $font-regular;
   font-size: 36px;
   line-height: 36px;
   color: $black;
+  text-transform: none;
 
   @media (min-width: $tablet) {
     font-size: 60px;
@@ -43,15 +44,24 @@ input[type="radio"].visually-hidden {
 }
 
 .section-title {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: $font-regular;
   font-size: 36px;
   line-height: 40px;
+  text-transform: none;
 
   @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
   }
+}
+
+.special-title {
+  font-family: $font-regular;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: none;
 }
 
 .btn {
@@ -69,4 +79,19 @@ input[type="radio"].visually-hidden {
   border: 0;
   background-color: $basic-green;
   cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $special-green;
+  }
+
+  &:active,
+  &--active {
+    outline: none;
+    color: rgba($white, 0.3);
+  }
+}
+
+.transition-resize {
+  transition: left 0.5s, width 0.5s;
 }
