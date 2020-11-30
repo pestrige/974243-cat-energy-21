@@ -1,0 +1,47 @@
+.main-form {
+  padding-top: 27px;
+  min-width: 320px;
+  font-family: $font-regular;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-top: 1px solid $extra-special-grey;
+
+  & input::placeholder {
+    font-family: $font-regular;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.main-form__title {
+  margin-bottom: 37px;
+}
+
+.main-form__descr {
+  margin-top: 0;
+  margin-bottom: 39px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.main-form__fieldset {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  border: 0;
+}
+
+.main-form__label {
+  margin-bottom: 13px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 15px;
+}
+
+.main-form__legend {
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 24px;
+}

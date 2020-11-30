@@ -1,14 +1,10 @@
 .humburger {
+  width: 25px;
+  height: 25px;
   padding: 0;
   background-color: $white;
   border: 0;
   cursor: pointer;
-}
-
-.humburger--open {
-  position: relative;
-  width: 25px;
-  height: 25px;
 
   &::before,
   &::after {
@@ -19,6 +15,7 @@
     width: 25px;
     height: 2px;
     background-color: $black;
+    transition: transform 0.3s, top 0.3s, box-shadow 0.3s;
   }
 
   &::before {
@@ -27,5 +24,18 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+}
+
+.humburger--closed {
+  &::before {
+    top: 3px;
+    transform: rotate(0);
+    box-shadow: 0 8px 0 0 $black;
+  }
+
+  &::after {
+    top: 19px;
+    transform: rotate(0);
   }
 }
