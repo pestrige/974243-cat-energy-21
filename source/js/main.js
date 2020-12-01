@@ -32,6 +32,8 @@ const sliderRangeHandleMobile = slider.querySelector('.slide__range-mobile-toggl
 const btnBefore = slider.querySelector('.slider__btn--before');
 const btnAfter = slider.querySelector('.slider__btn--after');
 
+const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
+
 btnBefore.addEventListener('click', () => {
   resizedImageWrapper.classList.add('transition-resize');
   sliderRangeHandle.classList.add('transition-resize');
@@ -121,7 +123,7 @@ function imageCompareOnTouch() {
 };
 
 imageCompare();
-imageCompareOnTouch();
+//imageCompareOnTouch();
 
 
 /* slider on hover */

@@ -18,6 +18,14 @@
     padding-right: 84px;
     background-color: $white;
   }
+
+  &--inner-page {
+    padding-top: 34px;
+
+    @media (min-width: $tablet) {
+      padding-top: 66px;
+    }
+  }
 }
 
 .offer__title {

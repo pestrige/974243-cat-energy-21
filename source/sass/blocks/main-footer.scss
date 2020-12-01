@@ -1,5 +1,9 @@
 .main-footer {
   position: relative;
+
+  &--inner-page {
+    background-color: $basic-grey;
+  }
 }
 
 .main-footer__offer {
@@ -56,6 +60,18 @@
   @media (min-width: $desktop) {
     max-width: 1440px;
     padding-top: 58px;
+  }
+
+  &--inner-page {
+    padding-top: 38px;
+
+    @media (min-width: $tablet) {
+      padding-top: 55px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 59px;
+    }
   }
 }
 
