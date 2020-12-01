@@ -351,31 +351,31 @@
 
   &--email {
     &::after {
-      background-image: url("../../img/icon-email.svg");
+      background-image: url("../img/icon-email.svg");
     }
 
     &:focus-within {
       &::after {
-        background-image: url("../../img/icon-email-focus.svg");
+        background-image: url("../img/icon-email-focus.svg");
       }
     }
   }
 
   &--phone {
     &::after {
-      background-image: url("../../img/icon-phone.svg");
+      background-image: url("../img/icon-phone.svg");
     }
 
     &:focus-within {
       &::after {
-        background-image: url("../../img/icon-phone-focus.svg");
+        background-image: url("../img/icon-phone-focus.svg");
       }
     }
   }
 
   &--email-error {
     &::after {
-      background-image: url("../../img/icon-email-error.svg");
+      background-image: url("../img/icon-email-error.svg");
     }
 
     & .main-form__input {
@@ -386,7 +386,7 @@
 
   &--phone-error {
     &::after {
-      background-image: url("../../img/icon-phone-error.svg");
+      background-image: url("../img/icon-phone-error.svg");
     }
 
     & .main-form__input {
@@ -493,7 +493,7 @@
 
 .main-form__hidden-checkbox {
   &:checked + .main-form__custom-checkbox {
-    background-image: url("../../img/icon-checked.svg");
+    background-image: url("../img/icon-checked.svg");
     background-position: center;
     background-repeat: no-repeat;
   }

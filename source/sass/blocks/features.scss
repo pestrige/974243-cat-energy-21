@@ -104,18 +104,18 @@
   }
 
   &--healthy::before {
-    background-image: url("../../img/icon_leaf.svg");
+    background-image: url("../img/icon_leaf.svg");
   }
 
   &--type::before {
-    background-image: url("../../img/icon_tub.svg");
+    background-image: url("../img/icon_tub.svg");
   }
 
   &--plan::before {
-    background-image: url("../../img/icon_eat.svg");
+    background-image: url("../img/icon_eat.svg");
   }
 
   &--profit::before {
-    background-image: url("../../img/icon_alarm.svg");
+    background-image: url("../img/icon_alarm.svg");
   }
 }
