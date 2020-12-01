@@ -296,6 +296,7 @@
   grid-template-columns: max-content 1fr;
   column-gap: 15px;
   align-items: center;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     margin-bottom: 20px;
@@ -436,6 +437,16 @@
       font-size: 20px;
       line-height: 30px;
     }
+  }
+
+  &::-webkit-inner-spin-button {
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
+    appearance: none;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
   }
 }
 
