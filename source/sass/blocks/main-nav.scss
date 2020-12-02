@@ -27,7 +27,6 @@
     @media (max-width: $tablet - 1) {
       display: block;
       max-height: 400px;
-      //animation: menu-shift 1s;
     }
   }
 
@@ -60,6 +59,26 @@
     justify-content: flex-end;
     flex-wrap: wrap;
   }
+
+  &--inner-page {
+    .main-nav__link {
+      @media (min-width: $desktop) {
+        color: $black;
+
+        &[href]:hover {
+          color: rgba($black, 0.6);
+        }
+
+        &[href]:active {
+          color: rgba($black, 0.3);
+        }
+
+        &--active::after {
+          background-color: $basic-green;
+        }
+      }
+    }
+  }
 }
 
 .main-nav__item {
@@ -88,7 +107,7 @@
 
 .main-nav__link {
   color: $black;
-  transition: color 0.3s;
+  transition: color 0.3s outline 0.3s;
 
   &[href]:hover {
     color: rgba($black, 0.6);
