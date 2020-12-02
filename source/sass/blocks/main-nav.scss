@@ -108,7 +108,7 @@
 
 .main-nav__link {
   color: $black;
-  transition: color 0.3s;
+  transition: color 0.3s outline 0.3s;
 
   &[href]:hover {
     color: rgba($black, 0.6);

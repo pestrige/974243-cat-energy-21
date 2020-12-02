@@ -476,7 +476,7 @@
     }
   }
 
-  &:checked:focus-visible + .main-form__custom-radio {
+  &:checked:focus + .main-form__custom-radio {
     box-shadow: inset 0 0 0 8px $white, 0 0 2px 2px $basic-green;
 
     @media (min-width: $tablet) {
@@ -484,7 +484,7 @@
     }
   }
 
-  &:focus-visible + .main-form__custom-radio {
+  &:focus + .main-form__custom-radio {
     box-shadow: 0 0 2px 2px $basic-green;
   }
 }
@@ -509,6 +509,7 @@
     background-repeat: no-repeat;
   }
 
+  &:focus + .main-form__custom-checkbox,
   &:focus-visible + .main-form__custom-checkbox {
     box-shadow: 0 0 2px 2px $basic-green;
   }

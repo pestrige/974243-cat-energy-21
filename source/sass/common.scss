@@ -100,3 +100,8 @@ input[type="radio"].visually-hidden {
 .transition-resize {
   transition: left 0.5s, width 0.5s;
 }
+
+/*focus-visible polyfill */
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}

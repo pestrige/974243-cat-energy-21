@@ -114,7 +114,7 @@
   }
 
   &:active .main-footer__svg-path {
-    fill: $basic-green;
+    fill: rgba($basic-green, 0.3);
   }
 
   &:active .main-footer__created-by {
