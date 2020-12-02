@@ -28,10 +28,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source',
-      routes: {
-        '/node_modules': 'node_modules'
-      }
+      baseDir: 'source'
     },
     cors: true,
     notify: false,
