@@ -13,15 +13,15 @@
   <header class="body__header main-header">
     <a href="./index.html" class="main-header__logo main-logo">
       <picture class="main-logo__img">
-        <source srcset="./img/logo-tablet.svg" media="(min-width: 768px) and (max-width: 1439px)">
         <source srcset="./img/logo-desktop.svg" media="(min-width: 1440px)">
+        <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)">
         <img src="./img/logo-mobile.svg" alt="Логотип Cat Energy">
       </picture>
       <img class="main-logo__text" src="./img/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
     </a>
     <button class="main-header__menu-button humburger" type="button" aria-label="Открыть меню"></button>
     <nav class="main-header__nav main-nav main-nav--nojs">
-      <ul class="main-nav__list">
+      <ul class="main-nav__list main-nav__list--inner-page">
         <li class="main-nav__item">
           <a href="./index.html" class="main-nav__link">Главная</a>
         </li>
@@ -29,7 +29,7 @@
           <a class="main-nav__link main-nav__link--active">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a href="./form.html" class="main-nav__link">Подбор программы</a>
+          <a class="main-nav__link">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -302,8 +302,8 @@
     </section>
   </main>
 
-  <footer class="main-footer">
-    <div class="main-footer__offer offer container">
+  <footer class="main-footer main-footer--inner-page">
+    <div class="main-footer__offer main-footer__offer offer offer--inner-page container">
       <p class="offer__title">
         Приглашаем к&nbsp;сотрудничеству дилеров!
       </p>
@@ -324,7 +324,7 @@
     </div>
 
     <div class="main-footer__links container">
-      <div class="main-footer__links-inner">
+      <div class="main-footer__links-inner main-footer__links-inner--inner-page">
         <a href="./index.html" class="main-footer__logo">
           <img class="main-footer__logo-img" src="./img/logo-text.svg" width="128" height="24"
             alt="Текстовый логотип Cat Energy">
@@ -372,7 +372,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main-nav.js"></script>
 
 </body>
 

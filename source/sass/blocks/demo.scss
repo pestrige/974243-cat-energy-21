@@ -27,12 +27,12 @@
 
 .demo__text-block {
   margin-bottom: 36px;
-  padding-left: 20px;
-  padding-right: 21px;
+  padding-left: var(--mobile-padding);
+  padding-right: var(--mobile-padding);
 
   @media (min-width: $tablet) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: var(--tablet-padding);
+    padding-right: var(--tablet-padding);
     margin-bottom: 85px;
   }
 
@@ -46,7 +46,7 @@
     max-width: $desktop;
     margin-bottom: 0;
     padding-top: 53px;
-    padding-left: 110px;
+    padding-left: var(--desktop-padding);
     padding-right: 0;
   }
 }
