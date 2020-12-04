@@ -31,6 +31,8 @@
       //console.log('нажата');
       resizedImageWrapper.classList.remove('transition-resize');
       sliderRangeHandle.classList.remove('transition-resize');
+      sliderRangeHandleMobile.classList.remove('transition-resize');
+
 
       slider.onmousemove = (evt) => {
         let mouseX = evt.pageX;
