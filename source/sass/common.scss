@@ -26,6 +26,13 @@ input[type="radio"].visually-hidden {
     padding-left: var(--desktop-padding);
     padding-right: var(--desktop-padding);
   }
+
+  &--special-offer {
+    @media (min-width: $desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .main-title {
@@ -94,6 +101,26 @@ input[type="radio"].visually-hidden {
   &--active {
     outline: none;
     color: rgba($white, 0.3);
+  }
+
+  &--special {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $dark-grey;
+    background-color: $basic-grey;
+
+    @media (min-width: $tablet) {
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+    }
+
+    &:active {
+      color: rgba($dark-grey, 0.3);
+    }
   }
 }
 
