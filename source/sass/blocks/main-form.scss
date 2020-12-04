@@ -22,8 +22,8 @@
 }
 
 .main-form__wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: var(--mobile-padding);
+  padding-right: var(--mobile-padding);
 
   @media (min-width: $tablet) {
     padding-left: 70px;
@@ -38,8 +38,8 @@
 
   @media (min-width: $desktop) {
     max-width: 1440px;
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: var(--desktop-padding);
+    padding-right: var(--desktop-padding);
   }
 
   &--grid {
@@ -79,8 +79,8 @@
 .main-form__fieldset-group {
   @media (min-width: $desktop) {
     max-width: 1440px;
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: var(--desktop-padding);
+    padding-right: var(--desktop-padding);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 69px;
@@ -214,14 +214,14 @@
   padding-right: 0;
 
   @media (min-width: $tablet) {
-    padding-left: 30px;
+    padding-left: var(--tablet-padding);
   }
 
   @media (min-width: 1024px) {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 31px;
+    padding-left: var(--tablet-padding);
   }
 
   @media (min-width: $desktop) {
@@ -274,8 +274,8 @@
   }
 
   span {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: var(--mobile-padding);
+    padding-right: var(--mobile-padding);
     background-color: $white;
 
     @media (min-width: $tablet) {

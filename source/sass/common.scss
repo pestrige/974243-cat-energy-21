@@ -14,17 +14,24 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: var(--mobile-padding);
+  padding-right: var(--mobile-padding);
 
   @media (min-width: $tablet) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: var(--tablet-padding);
+    padding-right: var(--tablet-padding);
   }
 
   @media (min-width: $desktop) {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: var(--desktop-padding);
+    padding-right: var(--desktop-padding);
+  }
+
+  &--special-offer {
+    @media (min-width: $desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
@@ -94,6 +101,26 @@ input[type="radio"].visually-hidden {
   &--active {
     outline: none;
     color: rgba($white, 0.3);
+  }
+
+  &--special {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $dark-grey;
+    background-color: $basic-grey;
+
+    @media (min-width: $tablet) {
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+    }
+
+    &:active {
+      color: rgba($dark-grey, 0.3);
+    }
   }
 }
 

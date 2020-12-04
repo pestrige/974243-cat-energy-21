@@ -15,6 +15,13 @@ $red: #ff8282;
 $white: #ffffff;
 $black: #000000;
 
+/* Custom CSS prop */
+:root {
+  --mobile-padding: 20px;
+  --tablet-padding: 30px;
+  --desktop-padding: 110px;
+}
+
 /* Adaptive Widths */
 $mobile: 320px;
 $tablet: 768px;

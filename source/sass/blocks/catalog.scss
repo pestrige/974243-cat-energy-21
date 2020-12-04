@@ -1,0 +1,308 @@
+.catalog {
+  padding-top: 27px;
+
+  @media (min-width: $tablet) {
+    padding-top: 53px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 66px;
+  }
+}
+
+.catalog__title {
+  padding-left: var(--mobile-padding);
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    padding-left: var(--tablet-padding);
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    padding-left: var(--desktop-padding);
+    margin-bottom: 66px;
+  }
+}
+
+.catalog__list {
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-left: 0;
+  list-style: none;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 67px;
+    padding-left: var(--tablet-padding);
+    padding-right: var(--tablet-padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 48px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    margin-bottom: 76px;
+    padding-left: var(--desktop-padding);
+    padding-right: var(--desktop-padding);
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 45px;
+  }
+}
+
+.catalog__item {
+  padding-left: var(--mobile-padding);
+  padding-right: var(--mobile-padding);
+  border-bottom: 1px solid $light-grey;
+
+  @media (min-width: $tablet) {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: none;
+  }
+
+  &:first-child {
+    border-top: 1px solid $light-grey;
+
+    @media (min-width: $tablet) {
+      border-top: none;
+    }
+  }
+
+  &--show-all {
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-template-rows: 18% 82%;
+
+      &::before {
+        content: "";
+      }
+    }
+
+    @media (min-width: $desktop) {
+      grid-template-rows: 19% 81%;
+    }
+  }
+}
+
+.catalog__subtitle {
+  width: 100%;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 34px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 80px;
+    padding-left: var(--tablet-padding);
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--tablet-padding);
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    padding-left: 70px;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    margin-top: calc(0.6em + 2px);
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $basic-green;
+    z-index: -1;
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
+
+  span {
+    padding-left: var(--mobile-padding);
+    padding-right: var(--mobile-padding);
+    background-color: $white;
+
+    @media (min-width: $tablet) {
+      padding-left: 39px;
+      padding-right: 40px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 40px;
+    }
+  }
+}
+
+.catalog__extra-goods-wrapper {
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    margin-bottom: 86px;
+    padding-left: var(--desktop-padding);
+    padding-right: var(--desktop-padding);
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+  }
+}
+
+.catalog__extra-list {
+  margin-top: 0;
+  margin-bottom: 39px;
+  padding-left: var(--mobile-padding);
+  padding-right: var(--mobile-padding);
+  grid-column: 1 / 4;
+  list-style: none;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 68px;
+    padding-left: var(--tablet-padding);
+    padding-right: var(--tablet-padding);
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.catalog__extra-item {
+  border-bottom: 1px solid $light-grey;
+
+  @media (min-width: $tablet) {
+    border: 1px solid $light-grey;
+    border-top: none;
+  }
+
+  @media (min-width: $desktop) {
+    border-left: none;
+    border-right: none;
+  }
+
+  &:first-child {
+    border-top: 1px solid $light-grey;
+  }
+}
+
+.catalog__special-offer {
+  width: 100%;
+  min-height: 289px;
+  margin-bottom: 35px;
+  color: $white;
+  background-color: $basic-green;
+  background-image: url("../img/gift-bg-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-bg-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 200px;
+    margin-bottom: 76px;
+    background-image: url("../img/gift-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-bg-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    height: 100%;
+    background-image: url("../img/gift-bg-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-bg-desktop@2x.jpg");
+    }
+  }
+}
+
+.catalog__special-offer-title {
+  width: 161px;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 58px;
+  display: grid;
+  gap: 49px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    padding-top: 63px;
+    padding-left: 79px;
+    grid-template-columns: 161px 161px;
+    gap: 183px;
+    align-items: center;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    width: 161px;
+    padding-top: 57px;
+    padding-left: 0;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 85px 1fr;
+    gap: 0;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    width: 78px;
+    height: 80px;
+    justify-self: center;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet) {
+      margin-top: -4px;
+      justify-self: start;
+    }
+
+    @media (min-width: $desktop) {
+      justify-self: center;
+    }
+  }
+}
