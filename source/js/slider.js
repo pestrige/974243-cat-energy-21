@@ -4,14 +4,14 @@
 {
   const slider = document.querySelector('.slider__wrapper');
   const resizedImageWrapper = slider.querySelector('.slider__img-resize');
-  const resizedImage = slider.querySelector('.slider__img-before>img');
+  //const resizedImage = slider.querySelector('.slider__img-before>img');
   const sliderRange = slider.querySelector('.slider__range');
   const sliderRangeHandle = slider.querySelector('.slider__range-toggle');
   const sliderRangeHandleMobile = slider.querySelector('.slide__range-mobile-toggle');
   const btnBefore = slider.querySelector('.slider__btn--before');
   const btnAfter = slider.querySelector('.slider__btn--after');
 
-  const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
+  //const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
 
   btnBefore.addEventListener('click', () => {
     resizedImageWrapper.classList.add('transition-resize');
