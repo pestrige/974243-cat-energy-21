@@ -1,15 +1,17 @@
+'use strict'
+
 /* slider before-after */
 {
   const slider = document.querySelector('.slider__wrapper');
   const resizedImageWrapper = slider.querySelector('.slider__img-resize');
-  const resizedImage = slider.querySelector('.slider__img-before>img');
+  //const resizedImage = slider.querySelector('.slider__img-before>img');
   const sliderRange = slider.querySelector('.slider__range');
   const sliderRangeHandle = slider.querySelector('.slider__range-toggle');
   const sliderRangeHandleMobile = slider.querySelector('.slide__range-mobile-toggle');
   const btnBefore = slider.querySelector('.slider__btn--before');
   const btnAfter = slider.querySelector('.slider__btn--after');
 
-  const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
+  //const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
 
   btnBefore.addEventListener('click', () => {
     resizedImageWrapper.classList.add('transition-resize');
@@ -26,13 +28,13 @@
   });
 
   function imageCompare() {
-    sliderRangeHandle.onmousedown = () => {
+    const sliderMouseDown = () => {
       //console.log('нажата');
       resizedImageWrapper.classList.remove('transition-resize');
       sliderRangeHandle.classList.remove('transition-resize');
       sliderRangeHandleMobile.classList.remove('transition-resize');
 
-      slider.onmousemove = (evt) => {
+      const sliderMouseMove = (evt) => {
         let mouseX = evt.pageX;
         let sliderRangeWidth = sliderRange.offsetWidth;
         let sliderRangeX = sliderRange.getBoundingClientRect().left;
@@ -47,57 +49,62 @@
 
         let offsetInPersent = Math.round(offset * 100 / sliderRangeWidth);
         slider.style.setProperty('--show-persent', offsetInPersent + '%');
-        //console.log(mouseX, sliderRangeX, sliderRangeWidth, offset, offsetInPersent);
       };
 
-      document.onmouseup = () => {
-        slider.onmousemove = null;
-        sliderRangeHandle.onmouseup = null;
+      const sliderMouseUp = () => {
         //console.log('отпущена');
-      }
+        document.removeEventListener('mouseup', sliderMouseUp);
+        slider.removeEventListener('mousemove', sliderMouseMove);
+      };
 
-      sliderRangeHandle.ondragstart = function () {
+      const sliderDragBreak = () => {
         return false;
       };
+
+      slider.addEventListener('mousemove', sliderMouseMove);
+      document.addEventListener('mouseup', sliderMouseUp);
+      sliderRangeHandle.addEventListener('dragstart', sliderDragBreak);
     };
+
+    sliderRangeHandle.addEventListener('mousedown', sliderMouseDown);
   };
 
-  function imageCompareOnTouch() {
-    sliderRangeHandle.ontouchstart = () => {
-      //console.log('нажата');
-      resizedImageWrapper.classList.remove('transition-resize');
-      sliderRangeHandle.classList.remove('transition-resize');
-      sliderRangeHandleMobile.classList.remove('transition-resize');
+  // function imageCompareOnTouch() {
+  //   sliderRangeHandle.ontouchstart = () => {
+  //     //console.log('нажата');
+  //     resizedImageWrapper.classList.remove('transition-resize');
+  //     sliderRangeHandle.classList.remove('transition-resize');
+  //     sliderRangeHandleMobile.classList.remove('transition-resize');
 
-      slider.ontouchmove = (evt) => {
-        let mouseX = evt.pageX;
-        let sliderRangeWidth = sliderRange.offsetWidth;
-        let sliderRangeX = sliderRange.getBoundingClientRect().left;
-        let offset = mouseX - sliderRangeX;
+  //     slider.ontouchmove = (evt) => {
+  //       let mouseX = evt.pageX;
+  //       let sliderRangeWidth = sliderRange.offsetWidth;
+  //       let sliderRangeX = sliderRange.getBoundingClientRect().left;
+  //       let offset = mouseX - sliderRangeX;
 
-        if (offset < 0) {
-          offset = 0;
-        };
-        if (offset > sliderRangeWidth) {
-          offset = sliderRangeWidth;
-        };
+  //       if (offset < 0) {
+  //         offset = 0;
+  //       };
+  //       if (offset > sliderRangeWidth) {
+  //         offset = sliderRangeWidth;
+  //       };
 
-        let offsetInPersent = Math.round(offset * 100 / sliderRangeWidth);
-        slider.style.setProperty('--show-persent', offsetInPersent + '%');
-        //console.log(mouseX, sliderRangeX, sliderRangeWidth, offset, offsetInPersent);
-      };
+  //       let offsetInPersent = Math.round(offset * 100 / sliderRangeWidth);
+  //       slider.style.setProperty('--show-persent', offsetInPersent + '%');
+  //       //console.log(mouseX, sliderRangeX, sliderRangeWidth, offset, offsetInPersent);
+  //     };
 
-      document.ontouchend = () => {
-        slider.ontouchmove = null;
-        sliderRangeHandle.ontouchend = null;
-        //console.log('отпущена');
-      }
+  //     document.ontouchend = () => {
+  //       slider.ontouchmove = null;
+  //       sliderRangeHandle.ontouchend = null;
+  //       //console.log('отпущена');
+  //     }
 
-      sliderRangeHandle.ondragstart = function () {
-        return false;
-      };
-    };
-  };
+  //     sliderRangeHandle.ondragstart = function () {
+  //       return false;
+  //     };
+  //   };
+  // };
 
   imageCompare();
 }
