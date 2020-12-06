@@ -22,6 +22,7 @@
 }
 
 .main-form__wrapper {
+  line-height: 0;
   padding-left: var(--mobile-padding);
   padding-right: var(--mobile-padding);
 
@@ -183,14 +184,10 @@
   }
 
   &--comment {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
 
     @media (min-width: $tablet) {
-      margin-bottom: 59px;
-    }
-
-    @media (min-width: $desktop) {
-      margin-bottom: 61px;
+      margin-bottom: 66px;
     }
   }
 
@@ -209,7 +206,7 @@
 
 .main-form__legend {
   width: 100%;
-  display: flex;
+  //display: flex;
   padding-left: 0;
   padding-right: 0;
 
@@ -281,7 +278,7 @@
     @media (min-width: $tablet) {
       padding-left: 39px;
       padding-right: 40px;
-      flex-shrink: 0;
+      //flex-shrink: 0;
     }
 
     @media (min-width: $desktop) {
@@ -395,11 +392,15 @@
       border-width: 2px;
     }
   }
+
+  & sup {
+    vertical-align: top;
+  }
 }
 
 .main-form__input {
   min-height: 45px;
-  padding-left: 15px;
+  padding-left: 16px;
   padding-right: 9px;
   font-family: $font-regular;
   font-size: 16px;
@@ -411,7 +412,6 @@
 
   @media (min-width: $tablet) {
     min-height: 52px;
-    padding-top: 0;
     font-size: 20px;
     line-height: 30px;
   }
@@ -426,16 +426,11 @@
   }
 
   &::placeholder {
-    font-family: $font-regular;
-    font-size: 16px;
-    line-height: 18px;
     color: $dark-grey;
-    text-transform: uppercase;
+  }
 
-    @media (min-width: $tablet) {
-      font-size: 20px;
-      line-height: 30px;
-    }
+  &::-moz-placeholder {
+    opacity: 1;
   }
 
   &::-webkit-inner-spin-button {
