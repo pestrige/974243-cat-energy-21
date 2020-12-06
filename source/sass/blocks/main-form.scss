@@ -22,7 +22,6 @@
 }
 
 .main-form__wrapper {
-  line-height: 0;
   padding-left: var(--mobile-padding);
   padding-right: var(--mobile-padding);
 
@@ -88,11 +87,6 @@
     display: grid;
     grid-template-columns: 569px 569px;
     column-gap: 80px;
-
-    .main-form__wrapper {
-      padding-left: 0;
-      padding-right: 0;
-    }
   }
 }
 
@@ -136,6 +130,11 @@
 
     @media (min-width: $desktop) {
       margin-bottom: 0;
+
+      .main-form__wrapper {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 
@@ -184,10 +183,14 @@
   }
 
   &--comment {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
 
     @media (min-width: $tablet) {
       margin-bottom: 66px;
+    }
+
+    .main-form__wrapper {
+      line-height: 0;
     }
   }
 
@@ -205,7 +208,7 @@
 }
 
 .main-form__legend {
-  width: 100%;
+  //width: 100%;
   //display: flex;
   padding-left: 0;
   padding-right: 0;
@@ -215,14 +218,14 @@
   }
 
   @media (min-width: 1024px) {
-    max-width: 1024px;
+    width: 1024px;
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--tablet-padding);
   }
 
   @media (min-width: $desktop) {
-    max-width: 1440px;
+    width: 1440px;
     padding-left: 70px;
   }
 
@@ -270,7 +273,10 @@
     }
   }
 
-  span {
+  p {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-left: var(--mobile-padding);
     padding-right: var(--mobile-padding);
     background-color: $white;
@@ -278,7 +284,11 @@
     @media (min-width: $tablet) {
       padding-left: 39px;
       padding-right: 40px;
-      //flex-shrink: 0;
+      flex-shrink: 0;
+
+      br {
+        display: none;
+      }
     }
 
     @media (min-width: $desktop) {
@@ -399,6 +409,7 @@
 }
 
 .main-form__input {
+  min-width: 100px;
   min-height: 45px;
   padding-left: 16px;
   padding-right: 9px;
