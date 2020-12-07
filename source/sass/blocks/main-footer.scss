@@ -7,8 +7,10 @@
 }
 
 .main-footer__offer {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
+  z-index: 2;
 
   @media (min-width: $desktop) {
     position: absolute;
