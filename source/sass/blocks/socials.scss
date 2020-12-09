@@ -39,7 +39,7 @@
 }
 
 .socials__link {
-  &--vk svg {
+  &--vk .socials__icon {
     width: 23px;
     height: 16px;
 
@@ -49,7 +49,7 @@
     }
   }
 
-  &--instargam svg {
+  &--instargam .socials__icon {
     width: 16px;
     height: 16px;
 
@@ -59,7 +59,7 @@
     }
   }
 
-  &--facebook svg {
+  &--facebook .socials__icon {
     width: 22px;
     height: 22px;
 
@@ -69,24 +69,32 @@
     }
   }
 
-  &:hover .socials__svg-path {
+  &:hover .socials__icon {
     fill: $basic-green;
   }
 
-  &:active .socials__svg-path {
+  &:active .socials__icon {
     fill: rgba($basic-green, 0.3);
   }
 
-  &:hover .socials__svg-stroke {
+  &:hover .socials__icon--facebook {
+    fill: none;
     stroke: $basic-green;
   }
 
-  &:active .socials__svg-stroke {
+  &:active .socials__icon--facebook {
+    fill: none;
     stroke: rgba($basic-green, 0.3);
   }
 }
 
-.socials__svg-path,
-.socials__svg-stroke {
-  transition: fill 0.3s, stroke 0.3s;
+.socials__icon {
+  fill: $half-dark-grey;
+  transition: fill 0.3s;
+
+  &--facebook {
+    fill: none;
+    stroke: $half-dark-grey;
+    transition: stroke 0.3s;
+  }
 }
