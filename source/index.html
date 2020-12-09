@@ -16,7 +16,9 @@
         <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)" type="image/svg+xml">
         <img src="./img/logo-mobile.svg" alt="Логотип Cat Energy" type="image/svg+xml">
       </picture>
-      <img class="main-logo__text" src="./img/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
+      <svg class="main-logo__text" width="101" height="18">
+        <use xlink:href="./img/icon-sprite.svg#text-logo"></use>
+      </svg>
     </a>
     <button class="main-header__menu-button humburger" type="button" aria-label="Открыть меню"></button>
     <nav class="main-header__nav main-nav main-nav--nojs">
@@ -44,13 +46,18 @@
           </p>
         </div>
         <picture class="promo__image">
-          <source type="image/webp" srcset="./img/promo-can-desktop.webp 1x, ./img/promo-can-desktop@2x.webp 2x" media="(min-width: 1440px)">
-          <source type="image/webp" srcset="./img/promo-can-tablet.webp 1x, ./img/promo-can-tablet@2x.webp 2x" media="(min-width: 768px)">
-          <source type="image/webp" srcset="./img/promo-can-mobile.webp 1x, ./img/promo-can-mobile@2x.webp 2x" media="(min-width: 768px)">
+          <source type="image/webp" srcset="./img/promo-can-desktop.webp 1x, ./img/promo-can-desktop@2x.webp 2x"
+            media="(min-width: 1440px)">
+          <source type="image/webp" srcset="./img/promo-can-tablet.webp 1x, ./img/promo-can-tablet@2x.webp 2x"
+            media="(min-width: 768px)">
+          <source type="image/webp" srcset="./img/promo-can-mobile.webp 1x, ./img/promo-can-mobile@2x.webp 2x"
+            media="(min-width: 768px)">
 
-          <source srcset="./img/promo-can-desktop.png 1x, ./img/promo-can-desktop@2x.png 2x" media="(min-width: 1440px)">
+          <source srcset="./img/promo-can-desktop.png 1x, ./img/promo-can-desktop@2x.png 2x"
+            media="(min-width: 1440px)">
           <source srcset="./img/promo-can-tablet.jpg 1x, ./img/promo-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
-          <img src="./img/promo-can-mobile.png" srcset="./img/promo-can-mobile@2x.png 2x" alt="Банка корма Cat Energy Pro c курицей">
+          <img src="./img/promo-can-mobile.png" srcset="./img/promo-can-mobile@2x.png 2x"
+            alt="Банка корма Cat Energy Pro c курицей">
         </picture>
         <button class="promo__btn btn" type="button">Подобрать программу</button>
       </div>
@@ -135,20 +142,27 @@
           <div class="slider__wrapper">
             <div class="slider__img-resize">
               <picture class="slider__img-before">
-                <source srcset="./img/slide-before-tablet.webp 1x, ./img/slide-before-tablet@2x.webp 2x" media="(min-width: 768px)">
+                <source srcset="./img/slide-before-tablet.webp 1x, ./img/slide-before-tablet@2x.webp 2x"
+                  media="(min-width: 768px)">
                 <source srcset="./img/slide-before-mobile.webp 1x, ./img/slide-before-mobile@2x.webp 2x">
 
-                <source srcset="./img/slide-before-tablet.png 1x, ./img/slide-before-tablet@2x.png 2x" media="(min-width: 768px)">
-                <img src="./img/slide-before-mobile.png" srcset="./img/slide-before-mobile@2x.png 2x" alt="Фото кота до функционального питания">
+                <source srcset="./img/slide-before-tablet.png 1x, ./img/slide-before-tablet@2x.png 2x"
+                  media="(min-width: 768px)">
+                <img src="./img/slide-before-mobile.png" srcset="./img/slide-before-mobile@2x.png 2x"
+                  alt="Фото кота до функционального питания">
               </picture>
             </div>
             <div class="slider__img-wrapper">
               <picture class="slider__img-after">
-                <source type="image/webp" srcset="./img/slide-after-tablet.webp 1x, ./img/slide-after-tablet@2x.webp 2x" media="(min-width: 768px)">
-                <source type="image/webp" srcset="./img/slide-after-mobile.webp 1x, ./img/slide-after-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/slide-after-tablet.webp 1x, ./img/slide-after-tablet@2x.webp 2x"
+                  media="(min-width: 768px)">
+                <source type="image/webp"
+                  srcset="./img/slide-after-mobile.webp 1x, ./img/slide-after-mobile@2x.webp 2x">
 
-                <source srcset="./img/slide-after-tablet.png 1x, ./img/slide-after-tablet@2x.png 2x" media="(min-width: 768px)">
-                <img src="./img/slide-after-mobile.png" srcset="./img/slide-after-mobile@2x.png 2x" alt="Фото кота после функционального питания">
+                <source srcset="./img/slide-after-tablet.png 1x, ./img/slide-after-tablet@2x.png 2x"
+                  media="(min-width: 768px)">
+                <img src="./img/slide-after-mobile.png" srcset="./img/slide-after-mobile@2x.png 2x"
+                  alt="Фото кота после функционального питания">
               </picture>
             </div>
             <div class="slider__controls">
@@ -190,8 +204,10 @@
     <div class="main-footer__links container">
       <div class="main-footer__links-inner">
         <a class="main-footer__logo">
-          <img class="main-footer__logo-img" src="./img/logo-text.svg" width="128" height="24"
-            alt="Текстовый логотип Cat Energy">
+          <svg class="main-footer__logo-img" width="128" height="24" role="img"
+            aria-label="Текстовый логотип Cat Energy">
+            <use xlink:href="./img/icon-sprite.svg#text-logo"></use>
+          </svg>
         </a>
         <ul class="main-footer__socials socials">
           <li class="socials__item">
@@ -228,7 +244,9 @@
     </div>
   </footer>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvUyg_3R7p3709v3z5ZHpIhiyHty4cymo&callback=initMap&libraries=&v=weekly" defer></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvUyg_3R7p3709v3z5ZHpIhiyHty4cymo&callback=initMap&libraries=&v=weekly"
+    defer></script>
   <script src="js/slider.js"></script>
   <script src="js/main-nav.js"></script>
   <script src="js/google-map.js"></script>
