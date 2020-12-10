@@ -10,13 +10,13 @@
 
 <body class="body">
   <header class="body__header main-header">
-    <a class="main-header__logo main-logo">
+    <a class="main-header__logo main-logo" aria-label="логотип Кэт энерджи">
       <picture class="main-logo__img">
         <source srcset="./img/logo-desktop.svg" media="(min-width: 1440px)" type="image/svg+xml">
         <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)" type="image/svg+xml">
-        <img src="./img/logo-mobile.svg" alt="Логотип Cat Energy">
+        <img src="./img/logo-mobile.svg" alt="Логотип Cat Energy в виде стилизованного котика">
       </picture>
-      <svg class="main-logo__text" width="101" height="18">
+      <svg class="main-logo__text" width="101" height="18" aria-hidden="true">
         <use xlink:href="./img/icon-sprite.svg#text-logo"></use>
       </svg>
     </a>
@@ -50,8 +50,7 @@
             media="(min-width: 1440px)">
           <source type="image/webp" srcset="./img/promo-can-tablet.webp 1x, ./img/promo-can-tablet@2x.webp 2x"
             media="(min-width: 768px)">
-          <source type="image/webp" srcset="./img/promo-can-mobile.webp 1x, ./img/promo-can-mobile@2x.webp 2x"
-            media="(min-width: 768px)">
+          <source type="image/webp" srcset="./img/promo-can-mobile.webp 1x, ./img/promo-can-mobile@2x.webp 2x">
 
           <source srcset="./img/promo-can-desktop.png 1x, ./img/promo-can-desktop@2x.png 2x"
             media="(min-width: 1440px)">
@@ -212,7 +211,7 @@
         <ul class="main-footer__socials socials">
           <li class="socials__item">
             <a href="#" class="socials__link socials__link--vk" aria-label="Мы в Вконтакте">
-              <svg class="socials__icon">
+              <svg class="socials__icon" aria-hidden="true">
                 <use xlink:href="./img/icon-sprite.svg#icon-vk"></use>
               </svg>
 
@@ -220,7 +219,7 @@
           </li>
           <li class="socials__item">
             <a href="#" class="socials__link socials__link--instargam" aria-label="Мы в Instagram">
-              <svg class="socials__icon">
+              <svg class="socials__icon" aria-hidden="true">
                 <use xlink:href="./img/icon-sprite.svg#icon-instagram"></use>
               </svg>
 
@@ -228,7 +227,7 @@
           </li>
           <li class="socials__item">
             <a href="#" class="socials__link socials__link--facebook" aria-label="Мы в Facebook">
-              <svg class="socials__icon socials__icon--facebook">
+              <svg class="socials__icon socials__icon--facebook" aria-hidden="true">
                 <use xlink:href="./img/icon-sprite.svg#icon-facebook"></use>
               </svg>
             </a>
