@@ -69,6 +69,11 @@
     }
   }
 
+  &--facebook .socials__icon use {
+    width: 15px;
+    height: 29px;
+  }
+
   &:hover .socials__icon {
     fill: $basic-green;
   }
