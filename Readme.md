@@ -1,4 +1,4 @@
-# Учебный проект «Кэт энерджи» [![Dependency status][dependency-image]][dependency-url]
+# Учебный проект «Кэт энерджи»
 
 * Студент: [Dmitry Korovin](https://up.htmlacademy.ru/adaptive/21/user/974243).
 
