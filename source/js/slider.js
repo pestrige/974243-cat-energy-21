@@ -7,7 +7,7 @@
   //const resizedImage = slider.querySelector('.slider__img-before>img');
   const sliderRange = slider.querySelector('.slider__range');
   const sliderRangeHandle = slider.querySelector('.slider__range-toggle');
-  const sliderRangeHandleMobile = slider.querySelector('.slide__range-mobile-toggle');
+  const sliderRangeHandleMobile = slider.querySelector('.slider__range-mobile-toggle');
   const btnBefore = slider.querySelector('.slider__btn--before');
   const btnAfter = slider.querySelector('.slider__btn--after');
 
