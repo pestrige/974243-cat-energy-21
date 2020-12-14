@@ -15,7 +15,6 @@
   position: relative;
   width: 280px;
   margin: 0 auto;
-  //outline: 1px solid plum;
   user-select: none;
 
   @media (min-width: $tablet) {
@@ -35,14 +34,9 @@
   z-index: 2;
 
   @media (min-width: $tablet) {
-    // width: 50%; // убрать при реализации слайдера
     margin-left: 0;
     height: 520px;
     background-color: transparent;
-  }
-
-  @media (min-width: $desktop) {
-    // margin-left: -25px;
   }
 
   &::after {
@@ -52,7 +46,7 @@
     right: 0;
     width: 10px;
     height: 100%;
-    background-color: transparent; //rgba($black, 0.3); // заменить на transparent
+    background-color: transparent;
   }
 }
 
@@ -138,74 +132,19 @@
   }
 }
 
-// .slider__input {
-//   width: 100%;
-//   -webkit-appearance: none;
-//   appearance: none;
-//   height: 6px;
-//   background-color: $extra-special-grey;
-//   border-radius: 6px;
-//   outline: none;
-// }
-
-// .slider__input::-webkit-slider-thumb {
-//   -webkit-appearance: none;
-//   appearance: none;
-//   width: 84px;
-//   height: 14px;
-//   padding-left: 6px;
-//   padding-right: 6px;
-//   display: grid;
-//   align-items: center;
-//   border: 1px solid $special-grey;
-//   border-radius: 6px;
-//   background-color: $white;
-
-//   &:active {
-//     @media (min-width: $tablet) {
-//       outline: none;
-//       border: 1px solid $basic-green;
-//     }
-//   }
-
-//   @media (min-width: $tablet) {
-//     position: relative;
-//     margin-top: -14px;
-//     //left: calc(var(--show-persent) - 34px / 2); //calc(50% - 34px / 2); // заменить на calc(var(--show-persent) - 34px / 2);
-//     width: 34px;
-//     height: 34px;
-//     background-color: $basic-green;
-//     border-radius: 50%;
-//     box-shadow: 0 1px 3px rgba($black, 0.16), inset 0 0 0 12px $white;
-//     cursor: pointer;
-//   }
-
-//   &::before {
-//     content: "";
-//     width: var(--show-persent); // заменить на var(--show-persent)
-//     height: 6px;
-//     border-radius: 6px;
-//     background-color: $basic-green;
-//     transition: width 0.5s;
-
-//     @media (min-width: $tablet) {
-//       content: none;
-//     }
-//   }
-// }
-
 .slider__range-toggle {
   position: relative;
   width: 84px;
   height: 14px;
-  // padding-left: 6px;
-  // padding-right: 6px;
   display: grid;
   align-items: center;
   border: 1px solid $special-grey;
   border-radius: 6px;
   background-color: $white;
-  //transition: left 0.5s;
+
+  &:focus {
+    outline: none;
+  }
 
   &:active {
     @media (min-width: $tablet) {
@@ -217,7 +156,7 @@
   @media (min-width: $tablet) {
     position: relative;
     margin-top: -14px;
-    left: calc(var(--show-persent) - 34px / 2); //calc(50% - 34px / 2); // заменить на calc(var(--show-persent) - 34px / 2);
+    left: calc(var(--show-persent) - 34px / 2);
     width: 34px;
     height: 34px;
     background-color: $basic-green;
@@ -225,32 +164,18 @@
     box-shadow: 0 1px 3px rgba($black, 0.16), inset 0 0 0 12px $white;
     cursor: pointer;
   }
-
-  // &::before {
-  //   content: "";
-  //   width: var(--show-persent); // заменить на var(--show-persent)
-  //   height: 6px;
-  //   border-radius: 6px;
-  //   background-color: $basic-green;
-  //   //transition: width 0.5s;
-
-  //   @media (min-width: $tablet) {
-  //     content: none;
-  //   }
-  // }
 }
 
-.slide__range-mobile-toggle {
+.slider__range-mobile-toggle {
   position: absolute;
   margin-left: 6px;
   margin-right: 6px;
   top: 3px;
-  width: calc(var(--show-persent)); // заменить на var(--show-persent)
+  width: calc(var(--show-persent));
   max-width: calc(72px);
   height: 6px;
   border-radius: 6px;
   background-color: $basic-green;
-  //transition: width 0.5s;
 
   @media (min-width: $tablet) {
     display: none;
